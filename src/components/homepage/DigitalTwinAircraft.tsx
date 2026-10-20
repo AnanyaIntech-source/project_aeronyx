@@ -12,7 +12,7 @@ export function DigitalTwinAircraft({ aircraft, selected, onSelect }: {
 }) {
   return <div className="home-twin-stage">
     <div className="home-twin-image" role="group" aria-label="Aircraft component hotspots">
-      <img src={twinAircraft.url} alt="Detailed top-down cyan-blue fighter aircraft wireframe on a dark navy background" width="768" height="768" loading="lazy" />
+      <img src="/images/twin-aircraft.jpg" alt="Detailed top-down cyan-blue fighter aircraft wireframe on a dark navy background" width="768" height="768" loading="lazy" />
       <TooltipProvider delayDuration={180}>{COMPONENTS.map(({ key, label }) => <Tooltip key={key}><TooltipTrigger asChild><Button
         key={key}
         type="button"

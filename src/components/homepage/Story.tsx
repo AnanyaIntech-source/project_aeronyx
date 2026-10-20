@@ -3,7 +3,6 @@ import { motion, useReducedMotion } from "motion/react";
 import { useState, type ReactNode } from "react";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import apron from "@/assets/fleet-apron.jpg";
-import preview from "@/assets/fleet-command-preview.asset.json";
 import { COMPONENTS, getAircraft, type ComponentKey } from "@/lib/fleet/data";
 import { componentHealth, deviation, healthBand, runBaseline, runDisrupted, similarAircraft, weakestComponent } from "@/lib/fleet/engine";
 import { DigitalTwinAircraft } from "@/components/homepage/DigitalTwinAircraft";
@@ -78,7 +77,7 @@ export function Story() {
       </motion.div>
     </section>
 
-    <section id="fleet-command" className="home-section home-command"><div className="home-command-heading"><Chapter number="06" label="Fleet Command"><h2>THE ENTIRE FLEET.<br /><span className="text-primary">ONE INTELLIGENCE LAYER.</span></h2></Chapter><Button asChild className="home-cta"><Link to="/dashboard">Enter Fleet Command <ArrowUpRight /></Link></Button></div><motion.div {...reveal} className="home-dashboard-preview"><div className="home-tool-header"><span><span className="home-status-dot" />AERONYX / FLEET COMMAND</span><span>SYNTHETIC FLEET</span></div><Link to="/dashboard" aria-label="Open Fleet Command dashboard"><img src={preview.url} alt="The actual AERONYX Fleet Command overview, including aircraft readiness, sensor warnings and fleet metrics" width="1280" height="900" loading="lazy" /></Link></motion.div></section>
+    <section id="fleet-command" className="home-section home-command"><div className="home-command-heading"><Chapter number="06" label="Fleet Command"><h2>THE ENTIRE FLEET.<br /><span className="text-primary">ONE INTELLIGENCE LAYER.</span></h2></Chapter><Button asChild className="home-cta"><Link to="/dashboard">Enter Fleet Command <ArrowUpRight /></Link></Button></div><motion.div {...reveal} className="home-dashboard-preview"><div className="home-tool-header"><span><span className="home-status-dot" />AERONYX / FLEET COMMAND</span><span>SYNTHETIC FLEET</span></div><Link to="/dashboard" aria-label="Open Fleet Command dashboard"><img src="/images/fleet-command-preview.png" alt="The actual AERONYX Fleet Command overview, including aircraft readiness, sensor warnings and fleet metrics" width="1280" height="900" loading="lazy" /></Link></motion.div></section>
     <footer id="about" className="home-footer"><a href="#top" className="home-brand">AERONYX<span className="home-brand-dot" /></a><p>SIH 2026 · PS 26249<br />Research prototype · fictional aircraft · synthetic data · rules-based decision support.<br />All recommendations require qualified human approval.</p><a href="#top" className="home-back-top" aria-label="Back to top"><ArrowUpRight /></a></footer>
   </>;
 }
